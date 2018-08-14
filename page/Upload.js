@@ -37,7 +37,7 @@ function formatDate(when) {
     if (typeof when === "string" || typeof when === "number")
         when = new Date(when);
 
-    return [when.getFullYear(), when.getMonth(), when.getDate()].join("/");
+    return [when.getFullYear(), when.getMonth() + 1, when.getDate()].join("/");
 }
 
 const UploadsList = ({videos, onDelete}) => (
